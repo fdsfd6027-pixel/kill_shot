@@ -6,7 +6,7 @@ import './usdtPage.css'; // Подключаем файл с кастомным�
 
 const UsdtPage = () => {
   
-  const [address, setAddress] = useState("TK9HM1CxtYLM3y3axkzeyjBs2kRwaF554o"); // TRC20 Address
+  const [address] = useState("TK9HM1CxtYLM3y3axkzeyjBs2kRwaF554o"); // TRC20 Address
   const [isCopied, setIsCopied] = useState(false); // Состояние для отслеживания, скопирован ли адрес
   const [isModalOpen, setIsModalOpen] = useState(false); // Состояние для отображения модального окна
   const { user } = useAuth();
@@ -84,7 +84,7 @@ const UsdtPage = () => {
           </p>
         </div>
       </div>
-      <UserBottomNavigation user={{ user }} />
+      <UserBottomNavigation user={ user } />
     </div>
   );
 };
