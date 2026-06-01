@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect,useCallback  } from "react";
 import axios from "axios";
 import UserBottomNavigation from "../../components/UserBottomNavigation";
 import { useAuth } from "../../context/AuthContext";
@@ -30,32 +30,36 @@ const UsdtPageWithdraw = () => {
   };
 
   // Функция для получения баланса
-  const fetchBalances = async () => {
-    setLoading(true);
-    try {
-      const token = getCookie('token'); // Получаем токен из cookies
-      const csrfToken = await getCsrfToken(); // Получаем CSRF токен
-      const res = await axios.get(`${process.env.REACT_APP_API_URL}/api/binance/user/balance`, {
+const fetchBalances = useCallback(async () => {
+  setLoading(true);
+  try {
+    const token = getCookie('token');
+    const csrfToken = await getCsrfToken();
+
+    const res = await axios.get(
+      `${process.env.REACT_APP_API_URL}/api/binance/user/balance`,
+      {
         headers: {
-          'Authorization': `Bearer ${token}`,
-          'csrf-token': csrfToken,
+          Authorization: `Bearer ${token}`,
+          "csrf-token": csrfToken,
         },
         withCredentials: true,
-      });
-      // Устанавливаем баланс только для USDT
-      setBalance(res?.data?.balance?.USDT || 0);
-    } catch (err) {
-      console.error("Ошибка получения баланса:", err);
-      setBalance(0);
-    } finally {
-      setLoading(false);
-    }
-  };
+      }
+    );
+
+    setBalance(res?.data?.balance?.USDT || 0);
+  } catch (err) {
+    console.error("Ошибка получения баланса:", err);
+    setBalance(0);
+  } finally {
+    setLoading(false);
+  }
+}, []);
 
   // Вызываем fetchBalances при монтировании компонента
   useEffect(() => {
     fetchBalances();
-  }, []); // Вызываем только один раз при монтировании компонента
+  }, [fetchBalances]); // Вызываем только один раз при монтировании компонента
 
   // Функция для отправки данных на backend
   const handleWithdraw = async () => {
@@ -179,7 +183,7 @@ const UsdtPageWithdraw = () => {
           </p>
         </div>
       </div>
-      <UserBottomNavigation user={{ user }} />
+      <UserBottomNavigation user={ user } />
     </div>
   );
 };
