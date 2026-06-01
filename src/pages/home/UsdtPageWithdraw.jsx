@@ -56,10 +56,10 @@ const fetchBalances = useCallback(async () => {
   }
 }, []);
 
-  // Вызываем fetchBalances при монтировании компонента
-  useEffect(() => {
-    fetchBalances();
-  }, [fetchBalances]); // Вызываем только один раз при монтировании компонента
+useEffect(() => {
+  fetchBalances();
+// eslint-disable-next-line react-hooks/exhaustive-deps
+}, []);
 
   // Функция для отправки данных на backend
   const handleWithdraw = async () => {
