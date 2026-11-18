@@ -22,7 +22,7 @@ function User() {
   }
   
   return (
-    <div style={{paddingBottom:'8%'}} >
+    <div style={{paddingBottom:'8%',background:' linear-gradient(120deg, #090909, #29221A, #8C6B35)'}} >
       <div className='user_header-parent_div'>
         <nav to={`user/${user?.id}`} className='user_header-right_div'>
           <img className='user_header-right_div_img' src={userIcon} alt="User Icon" />

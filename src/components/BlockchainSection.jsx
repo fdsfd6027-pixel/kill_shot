@@ -2,10 +2,10 @@ import React, { useEffect, useRef, useState } from "react";
 import ReactECharts from "echarts-for-react";
 
 const metals = [
-  { symbol: "XAGUSD", icon: "https://mmtto.pro/upload/default/52946924084400128/20250416/0/303008528861974528.png", basePrice: 47.575 },
-  { symbol: "XPDUSD", icon: "https://mmtto.pro/upload/default/52946924084400128/20250416/0/303008678363750400.png", basePrice: 1401.686 },
-  { symbol: "XPTUSD", icon: "https://mmtto.pro/upload/default/52946924084400128/20250416/0/303008606032977920.png", basePrice: 1587.488 },
-  { symbol: "XAUUSD", icon: "https://mmtto.pro/upload/default/52946924084400128/20250416/0/303008127567745024.png", basePrice: 3941.851 },
+  { symbol: "XAGUSD",  basePrice: 47.575 },
+  { symbol: "XPDUSD", basePrice: 1401.686 },
+  { symbol: "XPTUSD", basePrice: 1587.488 },
+  { symbol: "XAUUSD", basePrice: 3941.851 },
 ];
 
 const BlockchainSection = () => {
@@ -91,7 +91,6 @@ const BlockchainSection = () => {
         >
           {/* Верхняя часть: иконка и символ */}
           <div style={{ display: "flex", alignItems: "center", gap: 6, marginBottom: 4 }}>
-            <img src={m.icon} alt={m.symbol} style={{ width: 25, height: 20 }} />
             <span style={{ fontWeight: 700, fontSize: 13,color:'white' }}>{m.symbol}</span>
           </div>
 

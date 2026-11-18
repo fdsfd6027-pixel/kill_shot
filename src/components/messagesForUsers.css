@@ -14,7 +14,7 @@
 .modal-content_for_users{
     text-align: center;
     padding: 6%;
-    background-color: #011249;
+    background: linear-gradient(120deg, rgb(9, 9, 9), rgb(41, 34, 26), rgb(140, 107, 53));
     border: 1px solid rgba(255, 255, 255, 0.342);
     border-radius: 10px;
     width: 78%;

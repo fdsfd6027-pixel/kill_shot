@@ -42,15 +42,32 @@
     justify-content: space-between;
 }
 
-.home_header_navigation_rightside_register{
-        padding: 5px 17px;
-        color:#fff;
-        border: none;
-        border-radius: 5px;
-        font-size: 12px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-        background: #c05bdd;
+.home_header_navigation_rightside_register {
+    padding: 5px 17px;
+    color: #fff;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+
+    background:
+        linear-gradient(#011249, #011249) padding-box,
+        linear-gradient(90deg, #ff00cc, #3333ff, #00ffff, #ff00cc) border-box;
+
+    background-size: 100% 100%, 300% 300%;
+    animation: borderGradient 4s ease infinite;
+}
+
+@keyframes borderGradient {
+    0% {
+        background-position: 0 0, 0% 50%;
+    }
+    50% {
+        background-position: 0 0, 100% 50%;
+    }
+    100% {
+        background-position: 0 0, 0% 50%;
+    }
 }
 
 .home_header_navigation_rightside_link_contactus_li{

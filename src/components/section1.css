@@ -18,8 +18,32 @@ body{
     font-weight: 700;
 }
 
-.home_section1_p{
-    color: #c05bdd;
+.home_section1_p {
+    background: linear-gradient(
+        90deg,
+        red,
+        blue,
+        purple,
+        orange,
+        red
+    );
+    background-size: 300% 300%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradientMove 5s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .home_section1_small_div{
@@ -32,17 +56,38 @@ body{
     color: white;
 }
 
-.home_section1_sign_up_btn{
+.home_section1_sign_up_btn {
     display: flex;
     justify-content: center;
     width: 12.5rem;
     height: 3.25rem;
     margin-top: 3.75rem;
-    background-color: #c05bdd;
+
+    border: 2px solid transparent;
     border-radius: .25rem;
+
+    background:
+        linear-gradient(#011249, #011249) padding-box,
+        linear-gradient(90deg, red, blue, purple, orange, red) border-box;
+
+    background-size: 100% 100%, 300% 300%;
+    animation: borderGradient 5s ease infinite;
+
     font-size: 1rem;
     color: #fff;
     line-height: 3.25rem;
     text-align: center;
     cursor: pointer;
+}
+
+@keyframes borderGradient {
+    0% {
+        background-position: 0 0, 0% 50%;
+    }
+    50% {
+        background-position: 0 0, 100% 50%;
+    }
+    100% {
+        background-position: 0 0, 0% 50%;
+    }
 }

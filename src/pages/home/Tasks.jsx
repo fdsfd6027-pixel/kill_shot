@@ -101,18 +101,18 @@ const Tasks = () => {
 
   const getTotalValueInUSD = () => {
     let total = 0;
-    if (balances["BTC"]) total += balances["BTC"] * 103471;
-    if (balances["USDT"]) total += balances["USDT"];
-    if (balances["ETH"]) total += balances["ETH"] * 3485;
-    if (balances["USDC"]) total += balances["USDC"];
+    if (balances["BTC"]) total += balances["BTC"] * 64081;
+    if (balances["USDT"]) total += balances["USDT"] * 1;
+    if (balances["ETH"]) total += balances["ETH"] * 1799;
+    if (balances["USDC"]) total += balances["USDC"] * 1;
     return total.toFixed(2);
   };
 
   const tasks = [
-    { id: 1, image: bitcoin_and_cryptocurrency_fu, alt: "bitcoin and cryptocurrency" },
-    { id: 2, image: cryptocurrency_main, alt: "cryptocurrency main" },
-    { id: 3, image: What_is_the_Difference_Between_Blockchain, alt: "What is the Difference Between Blockchain" },
-    { id: 4, image: bitcoin_orange, alt: "bitcoin orange" },
+    { id: 1, image: Bitcoin_Cashs_green, alt: "Bitcoin_Cashs_green" },
+    { id: 2, image: Bitcoin_Cashs_green, alt: "Bitcoin_Cashs_green" },
+    { id: 3, image: Bitcoin_Cashs_green, alt: "Bitcoin_Cashs_green" },
+    { id: 4, image: Bitcoin_Cashs_green, alt: "Bitcoin_Cashs_green" },
     { id: 5, image: Bitcoin_Cashs_green, alt: "Bitcoin Cashs Green" },
   ];
 
@@ -121,16 +121,16 @@ const Tasks = () => {
   <LoadingSpinner/>
  }
   return (
-    <div style={{paddingBottom:'24%'}}>
+    <div style={{paddingBottom:'24%',minHeight:'100vh',background:'linear-gradient(120deg, rgb(9, 9, 9), rgb(41, 34, 26), rgb(140, 107, 53))'}}>
       <h1 className="tasks_big_h1">Your Tasks</h1>
       <p className="tasks_total_value">Total Value: ${loading ? "Loading..." : totalValueToUsd}</p>
 
-      {totalValueToUsd >= 100 && canClaimReward ? (
+      {totalValueToUsd >= 500 && canClaimReward ? (
         tasks?.map(task =>
           completedTasks?.includes(task?.id) ? null : (
             <div key={task?.id} className="tasks_taksks_parent_div">
               <img height="200px" src={task?.image} alt={task?.alt} />
-              <h2>Click the button below to claim your 2% reward!</h2>
+              <h2>Click the button below to claim your 0.5% reward!</h2>
               <button onClick={() => claimReward(task?.id)} disabled={loading}>
                 {loading ? "Processing..." : "Claim Reward"}
               </button>
@@ -138,7 +138,7 @@ const Tasks = () => {
           )
         )
       ) : (
-        <p style={{fontSize:'15px',textAlign:'center'}}>{message || "The game will start when the score reaches 100$"}</p>
+        <p style={{fontSize:'15px',textAlign:'center'}}>{message || "The game will start when the score reaches 500$"}</p>
       )}
 
       <UserBottomNavigation user={user}/>

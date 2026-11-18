@@ -16,10 +16,10 @@ function UserBottomNavigation({user}) {
             navigationLink:`/user/${user?.id}`
         },
         {
-            img:marketIcon,
-            alt:'Market Icon',
-            text:'Quotes',
-            navigationLink:'/quotation'
+            img:'https://www.svgrepo.com/show/514320/message.svg',
+            alt:'Contact',
+            text:'Contact',
+            navigationLink:'https://t.me/matevos1an008'
         },
         {
             img:tradeIcon,

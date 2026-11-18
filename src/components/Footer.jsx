@@ -40,9 +40,9 @@ export default function Footer() {
                 {/* Left static content */}
                 <div className='footer_small_left_div' style={{ borderRight: '0.1px solid #ffffff26', paddingRight: '2%' }}>
                     <div className='footer_small_left_div_logo' style={{ display: "flex", alignItems: 'center' }}>
-                        <p className='footer_small_left_div_p'>HappyBit</p>
+                        <p className='footer_small_left_div_p'>LuckyBit</p>
                     </div>
-                    <p className='footer_copytight'>CopyRight @2018-2025 HappyBit All Rights Reserved.</p>
+                    <p className='footer_copytight'>CopyRight @2025-2026 LuckyBit All Rights Reserved.</p>
                 </div>
             </div>
         </footer>

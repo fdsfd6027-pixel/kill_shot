@@ -2,9 +2,10 @@ import { Link } from 'react-router-dom';
 import React from 'react';
 import rightside_sms_icon from "../images/rightside_sms_icon.png";
 import rightside_usa_icon from "../images/home_header_usa_flag.png";
-// import BitcoinCash from '../images/BitcoinCash.png';
 import G0009_Bitcoin_Purple from '../images/G0009-Bitcoin-Purple.webp';
 import "./header.css";
+
+
 const navItems = [
     { name: 'Futures', to: '#' },
     { name: 'Markets', to: '#' },
@@ -51,7 +52,7 @@ function Header() {
                 <ul className='home_header_navigation_leftside_ul'>
                     <li>
                         <Link to='/' className='home_header_navigation_leftside_link_first'>
-                            <img width='32px' height='32px' style={{borderRadius:'50%',marginTop:'10%'}} src={G0009_Bitcoin_Purple} />
+                            <img width='50px' height='32px' style={{borderRadius:'20%',marginTop:'10%'}} src={G0009_Bitcoin_Purple} />
                         </Link>
                     </li>
                     {navItems.map((item, index) => (

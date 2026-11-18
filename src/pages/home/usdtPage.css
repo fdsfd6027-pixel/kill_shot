@@ -4,7 +4,7 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #f4f7fb;
+  background: linear-gradient(120deg, rgb(9, 9, 9), rgb(41, 34, 26), rgb(140, 107, 53));
   font-family: 'Roboto', sans-serif;
   padding: 20px;
   box-sizing: border-box;
@@ -13,7 +13,7 @@
 
 /* Карточка депозита */
 .deposit-card {
-  background-color: #ffffff;
+  background-color: #0000007a;
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   width: 100%;
@@ -32,7 +32,7 @@
 .title {
   font-size: 24px;
   font-weight: 600;
-  color: #333;
+  color: #9d7848;
   margin-bottom: 10px;
   word-wrap: break-word;
 }
@@ -41,7 +41,7 @@
 .qr-code-container {
   margin: 5px 0;
   padding: 15px;
-  border: 1px solid #007bff34;
+  border: 1px solid #D6B77A;
   border-radius: 12px;
   display: inline-block;
   width: 100%;
@@ -77,8 +77,8 @@
 /* Сам адрес */
 .address {
   font-size: 14px;
-  color: #5f6f78;
-  background-color: #eef2f7;
+  color: #D6B77A;
+  background-color: #221d15;
   padding: 10px;
   border-radius: 8px;
   max-width: 100%;
@@ -108,7 +108,7 @@
 
 /* Контейнер для подсказок */
 .hint-container {
-  background-color: #f8f9fa;
+  background-color: #18140f;
   padding: 20px;
   border-radius: 10px;
   margin-top: 20px;
@@ -157,11 +157,11 @@
   .withdraw-input{
     width: 80%;
     font-size: 12px;
-    color: black;
+    color: rgb(220, 213, 213);
     padding: 7px;
     margin-top: 2%;
     border: none;
-    background-color: #eef2f7;
+    background-color: #221d15;
   }
   .address{
     font-size: 11px;
@@ -169,13 +169,13 @@
 
   .copy-button {
     padding: 6px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
+    background: linear-gradient(135deg, #090909, #29221A);
+    color: #D6B77A;
+    border: 1px solid #8C6B35;
     border-radius: 5px;
     font-size: 12px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: all 0.3s ease;
   }
 
   .hint-container {

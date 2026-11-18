@@ -25,18 +25,6 @@ export default function RechargePage() {
 
   return (
     <div className="page">
-      {/* HEADER — только input */}
-      <div className="recharge-header">
-        <div className="search-box">
-          <input
-            type="text"
-            placeholder="Search currency..."
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-          />
-        </div>
-      </div>
-
       {/* CONTENT */}
       <main className="content">
         <h3 className="content_title">Select the currency you want to recharge</h3>

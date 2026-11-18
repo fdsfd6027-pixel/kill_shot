@@ -17,6 +17,7 @@
 }
 
 .crypto-pair {
+  color: wheat;
   flex: 0 0 24%;
   text-align: left;
 }
@@ -25,6 +26,7 @@
 }
 .crypto-price,
 .crypto-change {
+  color:#d5c9b2;
   flex: 0 0 38%;
   text-align: center;
 }

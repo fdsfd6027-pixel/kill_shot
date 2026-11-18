@@ -24,7 +24,8 @@
     font-size: 12px;
     color: #fff;
 }
-.user_bottom_navigation_parent_div{
+.user_bottom_navigation_parent_div {
+    position: relative;
     box-shadow: 6px 1px 7px 2px #00000057;
     display: flex;
     font-size: .60rem;
@@ -32,9 +33,40 @@
     width: 100%;
     align-items: baseline;
     text-align: center;
-    background: #011249;
+    background: #01001c;
     padding-top: 3%;
     padding-bottom: 3%;
+    box-sizing: border-box;
+}
+
+.user_bottom_navigation_parent_div::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1.5px;
+
+    background: linear-gradient(
+        90deg,
+        #ff00cc,
+        #3333ff,
+        #00ffff,
+        #ff00cc
+    );
+
+    background-size: 300% 100%;
+    animation: navGradient 4s linear infinite;
+}
+
+@keyframes navGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 300% 50%;
+    }
 }
 .user_bottom_navigation_img{
     width:20px;
@@ -67,13 +99,19 @@
     font-size: 12px;
 
 }
-.user_header-parent_div_button{
-        padding: 6px 20px;
-        background-color: #007bff;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        font-size: 12px;
-        cursor: pointer;
-        transition: background-color 0.3s;
+.user_header-parent_div_button {
+    padding: 6px 20px;
+    background: linear-gradient(135deg, #090909, #29221A);
+    color: #D6B77A;
+    border: 1px solid #8C6B35;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.user_header-parent_div_button:hover {
+    border-color: #D6B77A;
+    box-shadow: 0 0 10px rgba(140, 107, 53, 0.4);
+    background: linear-gradient(135deg, #29221A, #090909);
 }

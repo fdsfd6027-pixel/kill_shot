@@ -321,7 +321,7 @@
     .all_home-header_parent_bg{
         background: url('./images/btnBackground.jpeg') no-repeat rgba(0, 0, 0, 0.7);
         background-blend-mode: overlay;
-        background-size: 100% 15.6%;
+        background-size: 100% 19.6%;
         background-repeat: no-repeat;
     }
     .section2_parent_div{
@@ -341,7 +341,7 @@
     .section3_h2{
         font-weight: 700;
         font-size: .8rem;
-        color: #c05bdd;
+        color: #4d6bcd;
         margin-bottom: 1.6rem;
     }
 
@@ -472,7 +472,7 @@
         margin: 0 auto;
     }
     .footer_small_left_div_p{
-        color: #c05bdd;
+        color: #4d6bcd;
         font-size: .6rem;
         letter-spacing: 2px;
     }
@@ -541,8 +541,9 @@
         padding: 6%;
     }
     .login_page_small_div_content_banner {
-        width: 76%;
+        width: 50%;
         height: 100%;
+        border-radius: 20%;
     }
     .login_page_parent_bg{
         min-height: 75vh;
@@ -562,55 +563,92 @@
         font-size: .55rem;
         padding-top: 4%;
     }
-    .login_page_small_div_content_login_input{
-        line-height: 1.4rem;
-        font-size: 0.5rem;
-        letter-spacing: 1px;
-        border: 1px solid #c15bdd56;
-    }
+.login_page_small_div_content_login_input,
+.input-email-error,
+.input-login-error {
+    width: 97%;
+    line-height: 1.5rem;
+    font-size: 0.5rem;
+    letter-spacing: 1px;
+    color: #fff;
 
-    .login_page_small_div_content_login_input:focus{
-        border: 1px solid #c15bdda3;
-    }
-     .input-email-error:focus{
-        border: 1px solid #c15bddc0;
-        border-radius: .225rem .225rem .225rem .225rem;
-     }
-    .input-login-error:focus{
-        border: .1rem solid #c15bddc0;
-        border-radius: .225rem .225rem .225rem .225rem;
-     }
-    .input-email-error{
-        width: 97%;
-        line-height: 1.5rem;
-        font-size: 0.5rem;
-        letter-spacing: 1px;
-        border-radius: .225rem .225rem .225rem .225rem;
-    }
-    input:focus {
+    border: 1px solid transparent;
+    border-radius: .225rem;
+
+    background:
+        linear-gradient(#011249, #011249) padding-box,
+        linear-gradient(90deg, #ff00cc, #3333ff, #00ffff, #ff00cc) border-box;
+
+    background-size: 100% 100%, 300% 300%;
+    animation: borderGradient 4s ease infinite;
+
+    transition: box-shadow 0.3s ease;
+}
+
+/* Focus */
+.login_page_small_div_content_login_input:focus,
+.input-email-error:focus,
+.input-login-error:focus {
     outline: none;
-    border-radius: .225rem .225rem .225rem .225rem;
+    border: 1px solid transparent;
+    border-radius: .225rem;
+
+    background:
+        linear-gradient(#011249, #011249) padding-box,
+        linear-gradient(90deg, #ff00cc, #3333ff, #00ffff, #ff00cc) border-box;
+
+    box-shadow: 0 0 8px #3333ff70;
+}
+
+/* Error messages */
+.login_errors_massages {
+    letter-spacing: 1px;
+    font-size: 0.4rem;
+    padding-top: 2%;
+    padding-left: 5%;
+    color: #ff00cc;
+}
+
+/* Gradient animation */
+@keyframes borderGradient {
+    0% {
+        background-position: 0% 50%;
     }
-    .input-login-error{
-        width: 97%;
-        line-height: 1.5rem;
-        font-size: 0.5rem;
-        letter-spacing: 1px;
-        border-radius: .225rem .225rem .225rem .225rem;
+    50% {
+        background-position: 100% 50%;
     }
-    .login_errors_massages{
-        letter-spacing: 1px;
-        font-size: 0.4rem;
-        padding-top: 2%;
-        padding-left: 5%;
+    100% {
+        background-position: 0% 50%;
     }
-    .login_page_small_div_content_submit_input{
-        border: none;
-        height: 1.3rem;
-        line-height: 1.3rem;
-        font-size: 0.58rem;
-        margin: 0.8rem 0 .775rem;
-    }
+}
+.login_page_small_div_content_submit_input {
+    height: 1.5rem;
+    line-height: 1.3rem;
+    font-size: 0.58rem;
+    margin: 0.8rem 0 .775rem;
+
+    color: #fff;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    cursor: pointer;
+
+    background:
+        linear-gradient(#011249, #011249) padding-box,
+        linear-gradient(90deg, #ff00cc, #3333ff, #00ffff, #ff00cc) border-box;
+
+    background-size: 100% 100%, 300% 300%;
+    animation: borderGradient 4s ease infinite;
+
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.login_page_small_div_content_submit_input:hover {
+    box-shadow: 0 0 12px #3333ff80, 0 0 18px #ff00cc40;
+}
+
+.login_page_small_div_content_submit_input:active {
+    transform: scale(0.97);
+}
     .login_page_small_div_content_h2 {
         padding-bottom: 8%;
     }

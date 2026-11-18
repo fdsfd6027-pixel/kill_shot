@@ -7,15 +7,15 @@
   color: #fff;
 }
 .withdraw-button{
-  margin-top: 2%;
+    margin-top: 2%;
     padding: 6px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
+    background: linear-gradient(135deg, #090909, #29221A);
+    color: #D6B77A;
+    border: 1px solid #8C6B35;
     border-radius: 5px;
-    font-size: 13px;
+    font-size: 12px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: all 0.3s ease;
 }
 .status-message{
   margin: 0 auto;
@@ -64,10 +64,8 @@
 /* CONTENT */
 .content {
   flex: 1;
-  background: #02022c;
+  background: linear-gradient(120deg, rgb(9, 9, 9), rgb(41, 34, 26), rgb(140, 107, 53));
   color: #131419;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
   padding: 20px;
 }
 
@@ -86,7 +84,7 @@
 }
 
 .currency-item {
-  background: #011249;
+  background: #00000024;
   border-radius: 8px;
   height: 62px;
   display: flex;

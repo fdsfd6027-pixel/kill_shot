@@ -10,7 +10,7 @@ function Section2() {
         <div className='section2_parent_div'>
             <div className='section2_lefside_small_div'>
                 <img src={section_2_icon} alt="" />
-                <p className='section2_leftside_small_div_p'>HappyBit EX demonstrates commitment to legal and transparent operations through MSB registration</p>
+                <p className='section2_leftside_small_div_p'>LuckyBit EX demonstrates commitment to legal and transparent operations through MSB registration</p>
             </div>
             <div className='section2_rightside_small_div'>
                 <p className='section2_rightside_small_div_p'>More&#10093;</p>
