@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useAuth } from "../../context/AuthContext";
 import UserBottomNavigation from "../../components/UserBottomNavigation";
 import CodeSubmissionModal from "../../components/CodeSubmissionModal";
 import './usdtPage.css'; // Подключаем файл с кастомными стилями
