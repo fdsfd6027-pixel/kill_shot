@@ -21,7 +21,7 @@ const currencies = [
 
 export default function Withdraw() {
   const {user} = useAuth();
-  const [search, setSearch] = useState("");
+  const [search] = useState("");
 
   return (
     <div className="page">
