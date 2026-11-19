@@ -19,7 +19,7 @@ function UserBottomNavigation({user}) {
             img:'https://www.svgrepo.com/show/514320/message.svg',
             alt:'Contact',
             text:'Contact',
-            navigationLink:'https://t.me/matevos1an008'
+            navigationLink:'https://t.me/luckyBit8'
         },
         {
             img:tradeIcon,
