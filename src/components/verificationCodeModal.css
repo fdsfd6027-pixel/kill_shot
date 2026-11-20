@@ -14,7 +14,7 @@
 
 /* Контейнер содержимого модального окна */
 .verification-modal__content {
-  background-color: rgb(36, 36, 36);
+  background-color:#01001c;
   padding: 2rem;
   border-radius: 8px;
   width: 65%;
