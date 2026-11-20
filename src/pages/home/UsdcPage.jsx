@@ -4,7 +4,7 @@ import CodeSubmissionModal from "../../components/CodeSubmissionModal";
 import './usdtPage.css'; // Подключаем файл с кастомными стилями
 
 const UsdcPage = () => {
-    const [address] = useState("0x64a0EAf2A775C4878d611A3f6EaFd93B2B9dF519"); // TRC20 Address
+    const [address] = useState("TAzNAt6YqihijXsLXJfoMy2JWVhzWJooWo"); // TRC20 Address
     const [isCopied, setIsCopied] = useState(false); // Состояние для отслеживания, скопирован ли адрес
     const [isModalOpen, setIsModalOpen] = useState(false); // Состояние для отображения модального окна
     
