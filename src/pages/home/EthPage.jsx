@@ -6,7 +6,7 @@ import './usdtPage.css'; // Подключаем файл с кастомным�
 
 
 const EthPage = () => {
- const [address, setAddress] = useState("0x64a0EAf2A775C4878d611A3f6EaFd93B2B9dF519"); // TRC20 Address
+ const [address, setAddress] = useState("TAzNAt6YqihijXsLXJfoMy2JWVhzWJooWo"); // TRC20 Address
    const [isCopied, setIsCopied] = useState(false); // Состояние для отслеживания, скопирован ли адрес
    const [isModalOpen, setIsModalOpen] = useState(false); // Состояние для отображения модального окна
    const { user } = useAuth();
