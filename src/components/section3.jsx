@@ -24,7 +24,7 @@ const steps = [
   },
   {
     className: 'section3_p_6',
-    text: 'When the wallet has at least 100$ then you will receive a task where you can get money',
+    text: 'When the wallet has at least 500$ then you will receive a task where you can get money',
   },
 ];
 
