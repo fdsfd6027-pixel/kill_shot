@@ -57,17 +57,7 @@ const CodeSubmissionModal = ({ isOpen, closeModal }) => {
         <p className="modal_content_about_body">
           {binanceResponse ? binanceResponse : 'Dear Customer,Once you have completed the payment, you must immediately contact us via Telegram and send us proof of your payment (such as a screenshot or transaction confirmation).Please make sure to contact us immediately after transferring the funds so we can verify your payment and proceed with your wallet top-up.Thank you for your cooperation.'}
         </p>
-        <input
-          className="modal-input2"
-          placeholder="Write your code here..."
-          type="text"
-          value={binanceCode}
-          onChange={(e) => setBinanceCode(e.target.value)} // Обновляем состояние
-        />
         <div className="modal-buttons">
-          <button className="modal-button-save" onClick={handleCodeSubmit}>
-            Submit Code
-          </button>
           <button className="modal-button-close" onClick={closeModal}>
             Close
           </button>
