@@ -2,14 +2,14 @@ import React, { useState, useEffect, useCallback } from 'react';
 import '../components/cryptoTable.css';
 
 const initialCryptoData = [
-  { pair: 'BTCUSDT', price: 56008.94, change24h: -4.99 },
-  { pair: 'ETHUSDT', price: 1566.54, change24h: -3.48 },
-  { pair: 'YFIUSDT', price: 1594.00, change24h: -5.34 },
-  { pair: 'XRPUSDT', price: 0.8697, change24h: -4.44 },
-  { pair: 'XAUUSD', price: 3532.87, change24h: -2.49 },
-  { pair: 'ZECUSDT', price: 697.15, change24h: -8.31 },
-  { pair: 'FILUSDT', price: 0.5037, change24h: -9.53 },
-  { pair: 'DASHUSDT', price: 30.98, change24h: -13.75 },
+  { pair: 'BTCUSDT', price: 60460.88, change24h: -1.70 },
+  { pair: 'ETHUSDT', price: 1700.60, change24h: -1.35 },
+  { pair: 'YFIUSDT', price: 1680.00, change24h: 0.90 },
+  { pair: 'XRPUSDT', price: 0.9483, change24h: 0.69 },
+  { pair: 'XAUUSD', price: 3649.38, change24h: 0.48 },
+  { pair: 'ZECUSDT', price: 764.88, change24h: -2.87 },
+  { pair: 'FILUSDT', price: 0.5672, change24h: 4.48 },
+  { pair: 'DASHUSDT', price: 35.87, change24h: 0.20 },
 ];
 
 function CryptoTable() {
