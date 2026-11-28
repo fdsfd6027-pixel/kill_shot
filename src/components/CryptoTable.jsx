@@ -1,16 +1,18 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import '../components/cryptoTable.css';
 
+
 const initialCryptoData = [
-  { pair: 'BTCUSDT', price: 60460.88, change24h: -1.70 },
-  { pair: 'ETHUSDT', price: 1700.60, change24h: -1.35 },
-  { pair: 'YFIUSDT', price: 1680.00, change24h: 0.90 },
-  { pair: 'XRPUSDT', price: 0.9483, change24h: 0.69 },
-  { pair: 'XAUUSD', price: 3649.38, change24h: 0.48 },
-  { pair: 'ZECUSDT', price: 764.88, change24h: -2.87 },
-  { pair: 'FILUSDT', price: 0.5672, change24h: 4.48 },
-  { pair: 'DASHUSDT', price: 35.87, change24h: 0.20 },
+  { pair: 'BTCUSDT', price: 59222.00, change24h: -3.72 },
+  { pair: 'ETHUSDT', price: 1648.00, change24h: -4.28 },
+  { pair: 'YFIUSDT', price: 1561.00, change24h: -4.82 },
+  { pair: 'XRPUSDT', price: 0.9398, change24h: -3.34 },
+  { pair: 'XAUUSD', price: 3646.00, change24h: 0.06 },
+  { pair: 'ZECUSDT', price: 718.47, change24h: -5.20 },
+  { pair: 'FILUSDT', price: 0.5182, change24h: -3.00 },
+  { pair: 'DASHUSDT', price: 35.25, change24h: -4.83 },
 ];
+
 
 function CryptoTable() {
   const [cryptoData, setCryptoData] = useState(initialCryptoData);
